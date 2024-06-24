@@ -1,0 +1,43 @@
+{
+  "qianfan": {
+    "ak": "",
+    "sk": "",
+    "embedding": {
+      "init_kwargs": {
+        "query_per_second": 5
+      },
+      "model": "Embedding-V1"
+    },
+    "rewrite_llm": {
+      "model": "ERNIE-3.5-8K",
+      "init_kwargs": {
+        "query_per_second": 5
+      }
+    },
+    "answer_llm": {
+      "model": "ERNIE-Speed-128K",
+      "init_kwargs": {
+        "query_per_second": 5
+      }
+    }
+  },
+  "milvus": {
+    "kwargs": {
+      "connection_args": {
+        "db_name": "default",
+        "uri": "http://host:port"
+      },
+      "collection_name": "poem_collection",
+      "search_params": {
+        "ef": 128,
+        "metric_type": "L2"
+      },
+      "drop_old": false,
+      "text_field": "text",
+      "vector_field": "vector",
+      "timeout": 30
+    }
+  },
+  "poems_embedding_file": "tang_poems_embedded.json",
+  "max_token_chars_for_context": 65536
+}

@@ -1,0 +1,8 @@
+langchain >= 0.2.5, < 0.3
+langchain_community >= 0.2.5, < 0.3
+langchain_milvus >= 0.1.1, < 0.2
+fastapi >= 0.111.0, < 1.0
+pydantic >= 2.7
+qianfan >= 0.3.16, < 0.4
+pymilvus >= 2.4.4, < 2.5
+uvicorn >= 0.30.1, < 1.0
